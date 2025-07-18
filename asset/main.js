@@ -180,18 +180,19 @@ btnRename.onclick = function () {
     span.replaceWith(input);
     input.focus();
     input.select();
-    function finishRename() {
+
+    input.onblur = () => {
         const newName = input.value.trim() || oldName;
         const newSpan = document.createElement("span");
         newSpan.textContent = newName;
         input.replaceWith(newSpan);
-    }
-    input.onblur = () => {
-        finishRename();
     };
     input.onkeydown = (e) => {
         if (e.key === "Enter") {
-            finishRename();
+            const newName = input.value.trim() || oldName;
+            const newSpan = document.createElement("span");
+            newSpan.textContent = newName;
+            input.replaceWith(newSpan);
         }
     };
 };
