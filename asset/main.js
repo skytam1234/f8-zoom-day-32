@@ -5,6 +5,56 @@ const tree = [
         children: [
             {
                 type: "folder",
+                name: "partials",
+                children: [
+                    { type: "file", name: "Header.js" },
+                    { type: "file", name: "Footer.js" },
+                    { type: "file", name: "Head.js" },
+                ],
+            },
+            {
+                type: "folder",
+                name: "scss",
+                children: [
+                    {
+                        type: "folder",
+                        name: "components",
+                        children: [{ type: "file", name: "_button.scss" }],
+                    },
+                    {
+                        type: "folder",
+                        name: "layout",
+                        children: [
+                            { type: "file", name: "_footer.scss" },
+                            { type: "file", name: "_grid.scss" },
+                            { type: "file", name: "_header.scss" },
+                        ],
+                    },
+                    {
+                        type: "folder",
+                        name: "page",
+                        children: [
+                            { type: "file", name: "_collection.scss" },
+                            { type: "file", name: "_home.scss" },
+                            { type: "file", name: "_sign-in.scss" },
+                        ],
+                    },
+
+                    { type: "file", name: "_mixins.scss" },
+                    { type: "file", name: "_reset.scss" },
+                    { type: "file", name: "main.scss" },
+                    { type: "file", name: "_variable.scss" },
+                ],
+            },
+            { type: "file", name: "index.js" },
+        ],
+    },
+    {
+        type: "folder",
+        name: "public",
+        children: [
+            {
+                type: "folder",
                 name: "components",
                 children: [
                     { type: "file", name: "Header.js" },
@@ -14,7 +64,9 @@ const tree = [
             { type: "file", name: "index.js" },
         ],
     },
-    { type: "file", name: "README.md" },
+    { type: "file", name: "package-lock.json" },
+    { type: "file", name: "vite.config.js" },
+    { type: "file", name: "package.json" },
 ];
 $ = document.querySelector.bind(document);
 $$ = document.querySelectorAll.bind(document);
