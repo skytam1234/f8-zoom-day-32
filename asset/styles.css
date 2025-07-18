@@ -1,0 +1,56 @@
+.root > * {
+    display: block !important;
+}
+.folder > * {
+    display: none;
+}
+.show {
+    display: block;
+}
+.active {
+    background-color: #ccc;
+}
+.icon {
+    width: 30px;
+    height: 30px;
+}
+ul {
+    list-style-type: none;
+    cursor: pointer;
+}
+li {
+    cursor: pointer;
+}
+.title {
+    display: flex;
+    align-items: center;
+}
+.contextMenu {
+    position: absolute;
+    min-width: 200px;
+    min-height: 300px;
+    border-radius: 10px;
+    padding: 20px 10px;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 3px 4px 5px #ccc;
+    visibility: hidden;
+    transition: opacity ease 1s;
+    z-index: 4000;
+}
+.contextMenu.show {
+    opacity: 1;
+    visibility: visible;
+}
+.contextMenu-item {
+    padding: 3px 10px;
+    border-radius: 4px;
+    color: #000;
+    background: #fff;
+    border-bottom: 1px dotted #ccc;
+    cursor: pointer;
+    transition: all ease 1s;
+}
+.contextMenu-item:hover {
+    background: #ccc;
+}
